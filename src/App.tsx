@@ -4,12 +4,16 @@ import { injected } from "./components/wallet/connector";
 import { Web3ReactProvider } from "@web3-react/core";
 import { BigNumber, ethers } from "ethers";
 
-import setupNetwork from './components/utils/useWallet';
+// import setupNetwork from './utils/wallet';
 
 import './App.css';
 
+import useSetupNetwork from './utils/useWallet';
+
 function App() {
     const { active, account, library, connector, activate, deactivate } = useWeb3React<ethers.providers.Web3Provider>();
+
+    const { setupNetwork } = useSetupNetwork();
 
     const connect = async () => {
         try {
