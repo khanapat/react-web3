@@ -38,7 +38,7 @@ function App() {
 
     const signMessage = async () => {
         // const message = "Nice trust";
-        const message = ethers.utils.arrayify(ethers.utils.keccak256(ethers.utils.defaultAbiCoder.encode(["uint256", "uint256", "uint256"], [1, 1, ethers.utils.parseEther("50")])));
+        const message = ethers.utils.arrayify(ethers.utils.keccak256(ethers.utils.defaultAbiCoder.encode(["uint256", "uint256", "uint256"], [1, 1, ethers.utils.parseEther("40")])));
         // const message = ethers.utils.arrayify(ethers.utils.keccak256(ethers.utils.defaultAbiCoder.encode(["uint256", "uint256", "uint256", "uint256", "uint256", "uint256"], [3, 1, ethers.utils.parseEther("200"), 1645633716, 1645634016, ethers.utils.parseEther("50")])));
         if (account && library) {
             try {
